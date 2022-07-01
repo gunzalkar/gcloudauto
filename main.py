@@ -49,7 +49,7 @@ for index, row in df.iterrows():
     link_to_use = row['Agent YGL Site']
     
     #instantiate the Chrome class web driver and pass the Chrome Driver Manager
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
     
 
     #Maximize the Chrome window to full-screen
