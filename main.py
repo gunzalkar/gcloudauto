@@ -49,7 +49,7 @@ for index, row in df.iterrows():
     link_to_use = row['Agent YGL Site']
     
     #instantiate the Chrome class web driver and pass the Chrome Driver Manager
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     
 
     #Maximize the Chrome window to full-screen
@@ -131,15 +131,16 @@ for index, row in df.iterrows():
     if date_from == 'August 2022':
         driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[2]").click()
     elif date_from == 'July 2022':
-        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[6]").click()
+        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[6]").click() 
     elif date_from == 'September 2022':
         driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[5]").click()
     elif date_from == 'October 2022':
-        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[7]").click()
+        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[7]").click()
     elif date_from == 'November 2022':
-        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[3]").click()
+        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[3]").click()
     elif date_from == 'December 2022':
-        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[5]").click()
+        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[5]").click()
+
 
     try:
         driver.find_element(by=By.XPATH, value='/html/body/main/form/div/div[1]/div/div[2]/div[2]/div[3]/div/div[3]/button/i').click()
