@@ -121,7 +121,7 @@ for index, row in df.iterrows():
 
 
 
-    current_month = driver2.find_element(By.XPATH, "//li[text()='June 2022']")
+    current_month = driver2.find_element(By.XPATH, "//li[text()='July 2022']")
     while current_month.text != date_from:
         button = driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[1]/li[3]")
         
@@ -131,18 +131,15 @@ for index, row in df.iterrows():
     if date_from == 'August 2022':
         driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[2]").click()
     elif date_from == 'July 2022':
-        # time.sleep(2)
-        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[6]").click() 
+        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[6]").click()
     elif date_from == 'September 2022':
-        # time.sleep(2)
         driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[5]").click()
     elif date_from == 'October 2022':
-        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[7]").click()
+        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[7]").click()
     elif date_from == 'November 2022':
-        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[3]").click()
+        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[3]").click()
     elif date_from == 'December 2022':
-        driver2.find_element(By.XPATH, "/html/body/div/div[3]/ul[3]/li[5]").click()
-
+        driver2.find_element(By.XPATH, "/html/body/div[2]/div[3]/ul[3]/li[5]").click()
 
     try:
         driver.find_element(by=By.XPATH, value='/html/body/main/form/div/div[1]/div/div[2]/div[2]/div[3]/div/div[3]/button/i').click()
